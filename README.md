@@ -2,4 +2,4 @@
 
 EC530 Project2
 
-Branches contain main branch and device branch, which will be merged when all work of that specific branch is done
+Branches contain main branch and device branches, which will be merged when all work of that specific branch is done

@@ -30,4 +30,4 @@ jobs:
           pip install pytest
       - name: test
         run: |
-          pytest ./Project2/unit.py
+          pytest ./mysite/unit.py

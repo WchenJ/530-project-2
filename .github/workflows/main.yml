@@ -30,4 +30,3 @@ jobs:
           pip install pytest
       - name: test
         run: |
-          pytest ./mysite/unit.py

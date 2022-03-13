@@ -9,6 +9,7 @@ Database
 
 Data base include five tables: user, permission, device, divrec, Healthdata. And the structure and data fields could be found at 
 
+
 530 2.jpg.
 
 

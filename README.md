@@ -7,7 +7,11 @@ Main branch has finished testing.
 
 Database 
 
-Data base include five tables: user, permission, device, divrec, Healthdata. And the structure and data fields could be found at 530 2.jpg.
+Data base include five tables: user, permission, device, divrec, Healthdata. And the structure and data fields could be found at 
+
+530 2.jpg.
+
+
 All data could be attribute to a specific user by cascading foreign key conatraint between several kinds of id in each table.
 error conditions and codes:
 1   SQL error or missing database
@@ -19,11 +23,25 @@ error conditions and codes:
 7   Operation terminated by sqlite3_interrupt()
 
 Temperature, blood pressure, pulse, oximeter, weight and Glucometer is included as well as primary information of users and devices.
-Unit test has been done in ./Djtest/test0/test1.py.
-The example of sending data is shown in ./sql/test.py and should be run on local in python, which will update data in the Healthdata table.
+Unit test has been done in 
+
+
+./Djtest/test0/test1.py.
+
+
+The example of sending data is shown in 
+
+
+./sql/test.py 
+
+
+and should be run on local in python, which will update data in the Healthdata table.
 
 Restful system is developed via Django. 
-The API contains the functions of login, a restful port with the function of GET PUT DELETE POST of the existing database and get json response. All basic and GET function could be easily entered by Microsoft edge and the function of POST, PUT, DELETE are tested on postman. all results could be see in the ./picture .
+The API contains the functions of login, a restful port with the function of GET PUT DELETE POST of the existing database and get json response. All basic and GET function could be easily entered by Microsoft edge and the function of POST, PUT, DELETE are tested on postman. all results could be see in the 
+
+
+./picture .
 
 
 

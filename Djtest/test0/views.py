@@ -3,10 +3,10 @@ import json
 from django.http import JsonResponse
 from django.views.generic import View
 from django.forms.models import model_to_dict
-from .models import User,Healthdata
+from .models import User,Healthdata,Device,Divrec,Permission
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render
-from .serializers import UserSerializer,HealthdataSerializer
+from .serializers import UserSerializer,HealthdataSerializer,DeviceSerializer,DivrecSerializer,PermissionSerializer
 from rest_framework import viewsets, mixins
 from rest_framework.generics import ListAPIView
 from rest_framework.response import Response
@@ -154,9 +154,7 @@ class HealthdataViews(viewsets.ModelViewSet):
     serializer_class = HealthdataSerializer
     def get_queryset(self):
         return Healthdata.objects.all()
-    @csrf_exempt
-    def dispatch(self, request, *args, **kwargs):
-        return super(HealthdataView, self).dispatch(request, *args, **kwargs)
+
     
     def get(self, request, pk=0):
         if pk:
@@ -187,6 +185,21 @@ class HealthdataViews(viewsets.ModelViewSet):
         user = Healthdata.objects.get(pk=pk)
         user.delete()
         return JsonResponse({'code': 204, 'message': 'deleted'}, status=204)
+
+class DeviceViews(viewsets.ModelViewSet):
+    serializer_class = DeviceSerializer
+    def get_queryset(self):
+        return Device.objects.all()
+
+class DivrecViews(viewsets.ModelViewSet):
+    serializer_class = DivrecSerializer
+    def get_queryset(self):
+        return Divrec.objects.all()
+
+class PermissionViews(viewsets.ModelViewSet):
+    serializer_class = PermissionSerializer
+    def get_queryset(self):
+        return Permission.objects.all()
 
 class UserList(ListAPIView):
     queryset = User.objects.all()

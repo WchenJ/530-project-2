@@ -15,11 +15,14 @@ class change:
         self.cursor = None
 change.conn = sqlite3.connect('my10.db')
 change.cursor = change.conn.cursor()
-change.cursor.execute("UPDATE Healthdata SET tempreture = 36.6 WHERE ID = 2;")
-change.cursor.execute("UPDATE Healthdata SET time = '6.MAR.2022' WHERE ID = 2;")
+#change.cursor.execute("UPDATE Healthdata SET tempreture = 36.6 WHERE ID = 2;")
+#change.cursor.execute("UPDATE Healthdata SET time = '6.MAR.2022' WHERE ID = 2;")
+change.cursor.execute(
+       "INSERT INTO user (name,age,role,sex) VALUES ('Dr.Zhang',31,'doctor',1)"
+        )
 change.conn.commit()
 change.cursor.execute(
-        "select * from Healthdata"
+        "select * from user"
         )
 print(change.cursor.fetchall())
 change.conn.close()

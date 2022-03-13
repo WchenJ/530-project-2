@@ -30,4 +30,4 @@ jobs:
           pip install pytest
       - name: test
         run: |
-          
+          python ./sql/test.py

@@ -43,6 +43,12 @@ The API contains the functions of login, a restful port with the function of GET
 
 #./picture .
 
+test for API is done in
+
+#./Djtest/test0/test0.py.
+
+
+
 I‘ll prefer document database for the chat module (Mongle.db) for seceral reasons:
 
 First, the content of the chatting information is diverse, there may be words, pictures, syntax that ia not easy to forsee
@@ -52,3 +58,7 @@ and considered at the time when structure is designed, which is ecpected to rule
 Second, the demand of constrain are not that strict and most information stored are based on timeflow, the rarely simple linear structure.
 
 Chat Module
+
+The user of chat moudle needs to receive the message from the talking parterners, send message to the parterners and store the records..
+
+The Module support sending, receiving and storing based on MangoDB. A database will be created when a chat between two users start. Both parterners can send and check the talking content.

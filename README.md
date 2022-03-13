@@ -15,6 +15,7 @@ Data base include five tables: user, permission, device, divrec, Healthdata. And
 
 All data could be attribute to a specific user by cascading foreign key conatraint between several kinds of id in each table.
 error conditions and codes:
+
 1   SQL error or missing database
 2   Internal error in SQLite
 3   Access denied

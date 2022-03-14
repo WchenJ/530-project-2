@@ -39,6 +39,6 @@ urlpatterns = [
    path('user/<int:pk>/', views.UsersView.as_view()),
    path('data/', views.HealthdataView.as_view()),
    path('data/<int:pk>/', views.HealthdataView.as_view()),
-   url('/', include(router.urls)),
+   path('/', include(router.urls)),
    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')) 
 ]

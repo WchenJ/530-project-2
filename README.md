@@ -65,4 +65,4 @@ The Module support sending, receiving and storing based on Sqlite3. A database w
 
 the test documents could be seen at
 
-#./pictures
+#./picture

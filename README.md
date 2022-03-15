@@ -49,7 +49,7 @@ test for API is done in
 
 
 
-I‘ll prefer document database for the chat module (Mongle.db) for seceral reasons:
+I‘ll prefer sql database for the chat module for seceral reasons:
 
 First, the content of the chatting information is diverse, there may be words, pictures, syntax that ia not easy to forsee
 
@@ -59,6 +59,10 @@ Second, the demand of constrain are not that strict and most information stored 
 
 Chat Module
 
-The user of chat moudle needs to receive the message from the talking parterners, send message to the parterners and store the records..
+The user of chat moudle needs to receive the message from the talking parterners, send message to the parterners and store the records.
 
-The Module support sending, receiving and storing based on MangoDB. A database will be created when a chat between two users start. Both parterners can send and check the talking content.
+The Module support sending, receiving and storing based on Sqlite3. A database will be created for a chatroom .  Parterners can send and check the talking content.
+
+the test documents could be seen at
+
+#./pictures
